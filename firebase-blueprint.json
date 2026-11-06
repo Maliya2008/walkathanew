@@ -1,0 +1,89 @@
+{
+  "collections": [
+    {
+      "name": "users",
+      "description": "Store admin users",
+      "schema": {
+        "email": "string",
+        "role": "string",
+        "createdAt": "string"
+      }
+    },
+    {
+      "name": "stories",
+      "description": "Store all public and draft stories",
+      "schema": {
+        "id": "string",
+        "title": "string",
+        "slug": "string",
+        "coverImage": "string",
+        "description": "string",
+        "shortDescription": "string",
+        "content": "string",
+        "fullContent": "string",
+        "categoryId": "string",
+        "category": "string",
+        "categoryName": "string",
+        "tags": "array",
+        "author": "map",
+        "uploadDate": "string",
+        "uploadedDate": "string",
+        "updatedDate": "string",
+        "createdAt": "string",
+        "updatedAt": "string",
+        "readingTime": "number",
+        "views": "number",
+        "published": "boolean",
+        "featured": "boolean",
+        "directAdLink": "string"
+      }
+    },
+    {
+      "name": "categories",
+      "description": "Store story categories and genres",
+      "schema": {
+        "name": "string",
+        "slug": "string",
+        "description": "string",
+        "createdAt": "string",
+        "storyCount": "number"
+      }
+    },
+    {
+      "name": "settings",
+      "description": "Global settings. Use document ID 'global'",
+      "schema": {
+        "siteName": "string",
+        "alternateName": "string",
+        "logo": "string",
+        "tagline": "string",
+        "contactEmail": "string",
+        "metaTitle": "string",
+        "metaDescription": "string",
+        "keywords": "string",
+        "ogImage": "string",
+        "googleAnalyticsId": "string",
+        "searchConsoleVerification": "string",
+        "publisherName": "string"
+      }
+    },
+    {
+      "name": "advertisements",
+      "description": "Global ads. Use document ID 'settings'",
+      "schema": {
+        "enabled": "boolean",
+        "globalDirectLink": "string",
+        "maxTriggers": "number",
+        "updatedAt": "string"
+      }
+    },
+    {
+      "name": "storyAdvertisements",
+      "description": "Story-specific ads. Document ID should be story ID",
+      "schema": {
+        "storyId": "string",
+        "adCode": "string"
+      }
+    }
+  ]
+}
